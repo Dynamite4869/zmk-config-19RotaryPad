@@ -29,7 +29,7 @@
         label = "encoder";
         a-gpios = <&xiao_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // A相 → D6 (例)
         b-gpios = <&xiao_d 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // B相 → D7 (例)
-        steps = <48>;
+        steps = <24>;
         status = "okay";
     };
 
