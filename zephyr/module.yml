@@ -1,4 +1,6 @@
-name: zmk-keyboard-<19RotaryPad>
-build:
-  settings:
-    board_root: .
+name: 19RotaryPad
+type: shield
+dependencies:
+  - zmk
+  - zephyr
+  - keymap
