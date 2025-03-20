@@ -1,0 +1,40 @@
+/ {
+    chosen {
+        zmk,kscan = &default_kscan;
+    };
+
+    default_kscan: kscan {
+        compatible = "zmk,kscan-gpio-matrix"; // マトリクス構成
+        label = "kscan";
+
+        col-gpios = < // 列 (出力)
+            &xiao_d 5  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP) // Col 0 → D5
+            &xiao_d 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP) // Col 1 → D10
+            &xiao_d 9  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP) // Col 2 → D9
+            &xiao_d 8  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP) // Col 3 → D8
+        >;
+
+        row-gpios = < // 行 (入力)
+            &xiao_d 0  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP) // Row 0 → D0
+            &xiao_d 1  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP) // Row 1 → D1
+            &xiao_d 2  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP) // Row 2 → D2
+            &xiao_d 3  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP) // Row 3 → D3
+            &xiao_d 4  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP) // Row 4 → D4
+        >;
+    };
+
+    // ロータリーエンコーダの設定
+    left_encoder: encoder_left {
+        compatible = "alps,ec11";
+        label = "encoder";
+        a-gpios = <&xiao_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // A相 → D6 (例)
+        b-gpios = <&xiao_d 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // B相 → D7 (例)
+        steps = <48>;
+        status = "okay";
+    };
+
+    sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&left_encoder>;
+    };
+};

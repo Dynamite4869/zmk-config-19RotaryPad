@@ -1,0 +1,6 @@
+if SHIELD_19ROTARYPAD
+
+config ZMK_KEYBOARD_NAME
+    default "19RotaryPad"
+
+endif

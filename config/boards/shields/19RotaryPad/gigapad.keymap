@@ -1,0 +1,38 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+
+&inc_dec_kp {
+    compatible = "zmk,behavior-encoder-inc-dec";
+};
+
+&kp {
+    compatible = "zmk,behavior-key-press";
+};
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+                &kp ESC    &kp Q    &kp W    &kp E
+                &kp A      &kp S    &kp D    &kp F
+                &kp Z      &kp X    &kp C    &kp V
+                &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp SPACE  &kp ENTER
+                &bt BT_CLR  &bt BT_NEXT  &kp RESET
+            >;
+            sensor-bindings = <&inc_dec_kp VOLUME_DOWN VOLUME_UP>;
+        };
+
+        encoder_layer {
+            compatible = "zmk,keymap";
+            bindings = <
+                &kp VOLUME_DOWN  // エンコーダ左回転
+                &kp VOLUME_UP    // エンコーダ右回転
+                &kp MUTE         // エンコーダ押し込み
+            >;
+        };
+    };
+};
