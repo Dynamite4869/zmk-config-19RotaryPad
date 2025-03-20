@@ -30,6 +30,7 @@
                 &kp Z      &kp X    &kp C    &kp V
                 &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp SPACE  &kp ENTER
                 &bt BT_CLR  &bt BT_NEXT  &kp 1
+            >;
             sensor-bindings = <&rot_kp PG_UP PG_DN>;
         };
 s
