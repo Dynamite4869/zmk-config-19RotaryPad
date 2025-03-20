@@ -3,4 +3,4 @@ type: shield
 dependencies:
   - zmk
   - zephyr
-  - keymap
+  
