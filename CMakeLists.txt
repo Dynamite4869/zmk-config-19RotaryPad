@@ -21,7 +21,7 @@ set(BOARD seeeduino_xiao_ble)
 
 
 # キーマップの設定
-set(ZMK_KEYMAP_FILE \zmk-config-19RotaryPad\config\boards\shields\19RotaryPad)
+set(ZMK_KEYMAP_FILE "zmk-config-19RotaryPad\config\boards\shields\19RotaryPad")
 
 # ZMKアプリケーションを追加
 add_subdirectory(zmk)
