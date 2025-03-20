@@ -12,6 +12,14 @@
 };
 
 / {
+
+
+    behaviors {
+        rot_kp: sensor_rotate_kp {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+        };
     keymap {
         compatible = "zmk,keymap";
 
@@ -23,16 +31,10 @@
                 &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp SPACE  &kp ENTER
                 &bt BT_CLR  &bt BT_NEXT  &kp RESET
             >;
-            sensor-bindings = <&inc_dec_kp VOLUME_DOWN VOLUME_UP>;
+            sensor-bindings = <&rot_kp PG_UP PG_DN>;
         };
 
-        encoder_layer {
-            compatible = "zmk,keymap";
-            bindings = <
-                &kp VOLUME_DOWN  // エンコーダ左回転
-                &kp VOLUME_UP    // エンコーダ右回転
-                &kp MUTE         // エンコーダ押し込み
-            >;
+       
         };
     };
 };
