@@ -9,8 +9,6 @@
 
         wakeup-source;
         diode-direction = "col2row";
-        row-size = <5>;
-        col-size = <4>;
         col-gpios = < // 列 (出力)
             &xiao_d 5  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP) // Col 0 → D5
             &xiao_d 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP) // Col 1 → D10
