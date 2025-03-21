@@ -20,3 +20,4 @@
 include:
   - board: seeeduino_xiao_ble
     shield: 19RotaryPad
+    snippet: zmk-usb-logging
