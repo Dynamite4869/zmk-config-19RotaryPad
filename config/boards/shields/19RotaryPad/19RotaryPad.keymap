@@ -22,7 +22,8 @@
     
     keymap {
         compatible = "zmk,keymap";
-
+        
+        default_layer {
             bindings = <
                 &kp ESC    &kp Q    &kp W    &kp E
                 &kp A      &kp S    &kp D    &kp F
@@ -33,3 +34,4 @@
             sensor-bindings = <&rot_kp PG_UP PG_DN>;
         };
     };
+};
