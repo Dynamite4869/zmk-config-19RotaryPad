@@ -2,6 +2,7 @@
 / {
     chosen {
         zmk,kscan = &default_kscan;
+        zmk,transform = &default_transform;
     };
     default_transform: keymap_transform0 {
         compatible = "zmk,matrix-transform";
