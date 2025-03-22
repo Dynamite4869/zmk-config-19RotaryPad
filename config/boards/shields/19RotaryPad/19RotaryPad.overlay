@@ -27,8 +27,8 @@
         diode-direction = "col2row";
         col-gpios  // 列 (出力)
             = <&xiao_d 5  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP) > // Col 0 → D5
-            , <xiao_d 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP) > // Col 1 → D10
-            , <xiao_d 9  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP) > // Col 2 → D9
+            , <&xiao_d 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP) > // Col 1 → D10
+            , <&xiao_d 9  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP) > // Col 2 → D9
             , <&xiao_d 8  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP) > // Col 3 → D8
             ;
 
