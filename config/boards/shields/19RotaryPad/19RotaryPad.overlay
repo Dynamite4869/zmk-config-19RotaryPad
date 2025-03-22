@@ -4,7 +4,7 @@
         zmk,kscan = &default_kscan;
         zmk,transform = &default_transform;
     };
-    default_transform: keymap_transform0 {
+   /* default_transform: keymap_transform0 {
         compatible = "zmk,matrix-transform";
         columns = <4>; // Length of the "col-gpios" array
         rows = <5>; // Length of the "row-gpios" array
@@ -21,7 +21,7 @@
             RC(4,0) RC(4,1) RC(4,2) RC(4,3)
         >;
     };
-
+  */
     default_kscan: kscan {
         compatible = "zmk,kscan-gpio-matrix"; // マトリクス構成
         wakeup-source;
