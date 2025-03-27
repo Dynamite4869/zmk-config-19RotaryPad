@@ -1,4 +1,5 @@
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <physical_layouts.dtsi>
 / {
     chosen {
         zmk,kscan = &default_kscan;
@@ -22,6 +23,18 @@
         >;
     };
   */
+
+    macropad_physical_layout: macropad_physical_layout {
+        compatible = "zmk,physical-layout";
+        transform = <&default_transform>;
+        kscan = <&kscan0>;
+        keys  //                     w   h    x    y     rot    rx    ry
+            = <&key_physical_attrs 100 100    0    0       0     0     0>
+            , <&key_physical_attrs 100 100  100    0       0     0     0>
+            , <&key_physical_attrs 100 100    0  100       0     0     0>
+            , <&key_physical_attrs 100 100  100  100       0     0     0>
+            ;
+    };
     default_kscan: kscan {
         compatible = "zmk,kscan-gpio-matrix"; // マトリクス構成
         wakeup-source;
