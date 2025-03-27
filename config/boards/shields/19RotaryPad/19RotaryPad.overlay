@@ -26,7 +26,7 @@
     macropad_physical_layout: macropad_physical_layout {
         compatible = "zmk,physical-layout";
         transform = <&default_transform>;
-        zmk,kscan = &kscan0;
+        zmk,kscan = <&default_kscan>;
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100    0    0       0     0     0>
             , <&key_physical_attrs 100 100  100    0       0     0     0>
