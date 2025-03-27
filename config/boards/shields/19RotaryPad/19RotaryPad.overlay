@@ -2,7 +2,7 @@
 #include <physical_layouts.dtsi>
 / {
     chosen {
-        zmk,kscan = &kscan0;
+        zmk,kscan = &default_kscan;  
         zmk,transform = &default_transform;
     };
     default_transform: keymap_transform0 {
@@ -27,7 +27,6 @@
         compatible = "zmk,physical-layout";
         display-name = "19RotaryPad Layout"; 
         transform = <&default_transform>;
-        zmk,kscan = <&kscan0>;
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100    0    0       0     0     0>
             , <&key_physical_attrs 100 100  100    0       0     0     0>
