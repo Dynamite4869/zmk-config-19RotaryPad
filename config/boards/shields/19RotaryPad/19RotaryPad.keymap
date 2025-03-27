@@ -29,7 +29,7 @@
                 &kp A      &kp S    &kp D    &kp F
                 &kp Z      &kp X    &kp C    &kp V
                 &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp SPACE  &kp ENTER
-                &bt BT_SEL 0  &BT_CLR  &BT_NXT
+                &bt BT_SEL 0  &bt BT_CLR  &bt BT_NXT
             >;
             sensor-bindings = <&rot_kp PG_UP PG_DN>;
         };
